@@ -1,0 +1,119 @@
+.vector-icon7 {
+  position: absolute;
+  height: 75%;
+  width: 43.67%;
+  top: 12.67%;
+  right: 28.33%;
+  bottom: 12.33%;
+  left: 28%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.ioncaret-back-sharp5 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.attendance-management {
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 127px);
+}
+.ioncaret-back-sharp-parent1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-darkorange);
+  width: 360px;
+  height: 60px;
+}
+.check-in-child,
+.check-in-item {
+  position: absolute;
+  left: calc(50% - 170px);
+  border-radius: var(--br-mini);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+  width: 339px;
+  height: 60px;
+}
+.check-in-child {
+  top: 442px;
+  border: 1px solid var(--color-darkorange);
+  box-sizing: border-box;
+}
+.check-in-item {
+  top: 513px;
+  background-color: var(--color-darkorange);
+}
+.click-photo,
+.get-history {
+  position: absolute;
+  top: 530px;
+  left: 123px;
+}
+.click-photo {
+  top: 458px;
+  left: 126px;
+  color: var(--color-darkorange);
+}
+.check-in-inner {
+  position: absolute;
+  top: 71px;
+  left: calc(50% - 169px);
+  border-radius: var(--br-11xl);
+  background-color: var(--color-whitesmoke-200);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 339px;
+  height: 355px;
+}
+.ant-designcamera-filled-icon {
+  position: absolute;
+  top: 196px;
+  left: 135px;
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.get-verified-for,
+.report2 {
+  position: absolute;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-arial);
+  color: var(--color-gray-300);
+}
+.get-verified-for {
+  top: 286px;
+  left: calc(50% - 81px);
+}
+.report2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 747px;
+  left: 161px;
+  text-decoration: underline;
+  text-align: left;
+  display: inline-block;
+}
+.check-in {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-open-sans);
+}

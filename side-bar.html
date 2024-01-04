@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./side-bar.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public Sans:wght@100;200;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="side-bar">
+      <button class="mdiabout-parent" id="popupframeButton">
+        <img class="mdiabout-icon" alt="" src="./public/mdiabout@2x.png" />
+
+        <div class="about1">About</div>
+      </button>
+      <button class="mdiabout-group" id="popupframeButton1">
+        <img class="mdiabout-icon" alt="" src="./public/mdiabout@2x.png" />
+
+        <div class="about1">Report</div>
+      </button>
+      <button class="rectangle-parent" id="popupframeButton2">
+        <div class="frame-child"></div>
+        <div class="log-out-parent">
+          <b class="log-out">Log out</b>
+          <img
+            class="mdiabout-icon"
+            alt=""
+            src="./public/linemdlogout@2x.png"
+          />
+        </div>
+      </button>
+      <button class="mdipassword-parent" id="popupgroupButton">
+        <img class="mdiabout-icon" alt="" src="./public/mdipassword@2x.png" />
+
+        <div class="change-password2">Change Password</div>
+      </button>
+      <img
+        class="carbonclose-filled-icon"
+        alt=""
+        src="./public/carbonclosefilled@2x.png"
+      />
+    </div>
+
+    <script>
+      var popupframeButton = document.getElementById("popupframeButton");
+      if (popupframeButton) {
+        popupframeButton.addEventListener("click", function (e) {
+          window.location.href = "./about.html";
+        });
+      }
+      
+      var popupframeButton1 = document.getElementById("popupframeButton1");
+      if (popupframeButton1) {
+        popupframeButton1.addEventListener("click", function (e) {
+          window.location.href = "./report.html";
+        });
+      }
+      
+      var popupframeButton2 = document.getElementById("popupframeButton2");
+      if (popupframeButton2) {
+        popupframeButton2.addEventListener("click", function (e) {
+          window.location.href = "./landig-page.html";
+        });
+      }
+      
+      var popupgroupButton = document.getElementById("popupgroupButton");
+      if (popupgroupButton) {
+        popupgroupButton.addEventListener("click", function (e) {
+          window.location.href = "./change-password.html";
+        });
+      }
+      </script>
+  </body>
+</html>

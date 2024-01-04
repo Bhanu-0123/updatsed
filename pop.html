@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./pop.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public Sans:wght@100;200;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="pop">
+      <button class="thanks-for-submitting-parent">
+        <div class="thanks-for-submitting">Thanks for submitting !</div>
+        <div class="your-message-has">your message has been sent!</div>
+        <img
+          class="ant-designmessage-filled-icon"
+          alt=""
+          src="./public/antdesignmessagefilled@2x.png"
+        />
+      </button>
+      <button class="pop-child" autofocus="{true}" id="1"></button>
+      <div class="back4">back</div>
+    </div>
+
+    <script>
+      var popuprectangleButton = document.getElementById("1");
+      if (popuprectangleButton) {
+        popuprectangleButton.addEventListener("click", function (e) {
+          window.location.href = "./homr.html";
+        });
+      }
+      </script>
+  </body>
+</html>

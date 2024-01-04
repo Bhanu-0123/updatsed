@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <script>
+        // Get user details from query parameters
+        const params = new URLSearchParams(window.location.search);
+        const userEmail = params.get('email');
+        const userDisplayName = params.get('displayName');
+
+        // Display user details on the page
+        document.body.innerHTML = `
+            <h1>Welcome, ${userDisplayName}!</h1>
+            <p>Email: ${userEmail}</p>
+            <!-- Add more user details as needed -->
+        `;
+    </script>
+</body>
+</html>

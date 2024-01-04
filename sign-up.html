@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signup Form</title>
+    <script src="https://appauth-f9250-default-rtdb.firebaseio.com/"></script>
+    <style>
+        :root {
+            --color-white: #ffffff;
+            --color-black: #000000;
+            --color-orange: #ff5e00; /* Orange color for buttons */
+            --border-radius: 4px;
+            --button-height: 50px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--color-white); /* Updated to white */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: var(--color-black); /* Updated to black */
+            margin: 0 auto;
+            margin-top: 100px;
+            border: 1px solid var(--color-white);
+            border-radius: var(--border-radius);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid var(--color-white);
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--color-orange); /* Orange color for buttons */
+            color: var(--color-black);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: var(--border-radius);
+            height: var(--button-height);
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Media Queries for responsiveness */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 80%;
+            }
+        }
+
+        #goback {
+            background: transparent;
+            color: var(--color-orange); /* Orange color for buttons */
+            border: 1px solid var(--color-orange); /* Orange color for buttons */
+            margin-top: 8px;
+        }
+
+        #goback:hover {
+            background: var(--color-orange); /* Orange color for buttons */
+            color: var(--color-black);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="pwd" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw"><b>Photo</b></label>
+        <input type="file" id="photo" name="photo" required>
+
+        <button type="button" id="submit" name="submit">Signup</button>
+        <br><br>
+        <button onclick="window.location.href='index.html'" id="goback">Go Back</button><br><br>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+        import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDmu5pC_ezSxcunL9QpAYcjvMNqCde5SUQ",
+          authDomain: "appauth-f9250.firebaseapp.com",
+          projectId: "appauth-f9250",
+          storageBucket: "appauth-f9250.appspot.com",
+          messagingSenderId: "652727774916",
+          appId: "1:652727774916:web:021f6820fd8e0c1c39e391"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const storage = getStorage();
+
+        submit.addEventListener('click', (e) => {
+            var email = document.getElementById('uname').value;
+            var password = document.getElementById('pwd').value;
+            var photo = document.getElementById('photo').files[0];
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    // ...
+                    alert('user created successfully');
+
+                    // Upload the photo to the Firebase storage
+                    const storageRef = ref(storage, 'photos/' + photo.name);
+                    uploadBytes(storageRef, photo).then((snapshot) => {
+                        console.log('Uploaded a photo blob or file!');
+                    });
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    alert(errorMessage);
+                });
+        });
+    </script>
+</body>
+
+</html>

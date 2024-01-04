@@ -1,0 +1,72 @@
+.thanks-for-submitting {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: var(--font-open-sans);
+  color: var(--color-black);
+  text-align: left;
+  opacity: 0.75;
+}
+.your-message-has {
+  position: absolute;
+  top: 104px;
+  left: 48px;
+  font-size: var(--font-size-sm);
+  font-weight: 100;
+  font-family: var(--font-public-sans);
+  color: var(--color-gray-200);
+  text-align: left;
+}
+.ant-designmessage-filled-icon {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.pop-child,
+.thanks-for-submitting-parent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  position: absolute;
+}
+.thanks-for-submitting-parent {
+  background-color: transparent;
+  top: 15px;
+  left: 9px;
+  width: 280px;
+  height: 120px;
+}
+.pop-child {
+  background-color: var(--color-white);
+  top: 162px;
+  left: calc(50% - 88.5px);
+  border-radius: var(--br-11xl);
+  width: 190px;
+  height: 37px;
+}
+.back4 {
+  position: absolute;
+  top: 169px;
+  left: 129px;
+  font-weight: 600;
+}
+.pop {
+  position: relative;
+  border-radius: var(--br-6xl);
+  background-color: var(--color-darkorange);
+  width: 295px;
+  height: 214px;
+  overflow: hidden;
+  max-width: 90%;
+  max-height: 90%;
+  text-align: left;
+  font-size: var(--font-size-mid);
+  color: var(--color-gray-300);
+  font-family: var(--font-open-sans);
+}

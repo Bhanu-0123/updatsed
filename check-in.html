@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./check-in.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public Sans:wght@100;200;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="check-in">
+      <div class="ioncaret-back-sharp-parent1">
+        <button class="ioncaret-back-sharp5" id="ioncaretBackSharp">
+          <img class="vector-icon7" alt="" src="./public/vector@2x.png" />
+        </button>
+        <b class="attendance-management">Attendance Management</b>
+      </div>
+      <div class="check-in-child"></div>
+      <div class="check-in-item"></div>
+      <b class="get-history">Get history</b>
+      <b class="click-photo">Click Photo</b>
+      <div class="check-in-inner"></div>
+      <img
+        class="ant-designcamera-filled-icon"
+        alt=""
+        src="./public/antdesigncamerafilled@2x.png"
+      />
+
+      <div class="get-verified-for">get verified for attendance</div>
+      <button class="report2" id="report">Report</button>
+    </div>
+
+    <script>
+      var ioncaretBackSharp = document.getElementById("ioncaretBackSharp");
+      if (ioncaretBackSharp) {
+        ioncaretBackSharp.addEventListener("click", function (e) {
+          window.location.href = "./homr.html";
+        });
+      }
+      
+      var report = document.getElementById("report");
+      if (report) {
+        report.addEventListener("click", function (e) {
+          window.location.href = "./report.html";
+        });
+      }
+      </script>
+  </body>
+</html>

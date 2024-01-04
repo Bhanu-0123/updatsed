@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+
+      #sideBarContainer {
+          display: none;
+      }
+
+      .popup-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+      }
+
+      .side-bar {
+          background-color: #333;
+          color: #fff;
+          position: fixed;
+          top: 0;
+          left: -250px;
+          width: 250px;
+          height: 100%;
+          padding: 15px;
+          box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+          transition: left 0.3s ease-in-out;
+      }
+
+      .hamburger-icon {
+          cursor: pointer;
+          position: fixed;
+          top: 20px;
+          left: 20px;
+          font-size: 1.5em;
+          z-index: 2;
+      }
+
+      .side-bar button {
+          display: block;
+          margin-bottom: 10px;
+          padding: 10px;
+          text-decoration: none;
+          color: #fff;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          text-align: left;
+          width: 100%;
+      }
+
+      .carbonclose-filled-icon {
+          cursor: pointer;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+      }
+
+      @media screen and (max-width: 768px) {
+          .side-bar {
+              left: 0;
+          }
+      }
+  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./homr.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open Sans:wght@600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Public Sans:wght@100;200;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="homr">
+      <div class="line-parent">
+        <div class="frame-item"></div>
+        <button class="icround-person-parent" id="frameButton">
+          <img
+            class="icround-person-icon"
+            alt=""
+            src="./public/icroundperson@2x.png"
+          />
+
+          <b class="profile1">Profile</b>
+        </button>
+        <button class="fluenthome-24-filled-parent">
+          <img
+            class="fluenthome-24-filled-icon"
+            alt=""
+            src="./public/fluenthome24filled@2x.png"
+          />
+
+          <b class="home">Home</b>
+        </button>
+        <button class="icround-notifications-parent" id="frameButton2">
+          <img
+            class="icround-person-icon"
+            alt=""
+            src="./public/icroundnotifications@2x.png"
+          />
+
+          <b class="updates1">Updates</b>
+        </button>
+      </div>
+      <div class="frame-parent">
+        <div class="frame-parent">
+          <img class="vector-icon10" alt="" src="./public/rectangle-5@2x.png" />
+          <div class="ellipse-div"></div>
+          <b class="mokshagna">PROFILE</b>
+        </div>
+        <button
+          class="mingcutesettings-1-fill"
+          autofocus="{true}"
+          id="mingcutesettings1Fill"
+        >
+          <button class="group">
+           
+
+            
+          </button>
+        </button>
+      </div>
+      <button class="ellipse-parent" id="frameButton3">
+        <div class="frame-child1"></div>
+        <b class="check-in1">Check-In</b>
+        <img class="ok-icon" alt="" src="./public/ok@2x.png" />
+      </button>
+      <button class="ellipse-group" id="frameButton4">
+        <div class="frame-child2"></div>
+        <b class="leave1">Leave</b>
+        <img class="leave-icon" alt="" src="./public/leave@2x.png" />
+      </button>
+      <button class="ellipse-container" id="frameButton5">
+        <div class="frame-child3"></div>
+        <b class="salary1">Salary</b>
+        <img class="ok-icon" alt="" src="./public/rupee@2x.png" />
+      </button>
+      <button class="homr-inner" autofocus="{true}" id="frameButton6">
+        <div class="frame-wrapper">
+          <div class="ellipse-parent1">
+            <div class="frame-child4"></div>
+            <b class="tasks1">Tasks</b>
+            <img
+              class="work-authorisation-icon"
+              alt=""
+              src="./public/work-authorisation@2x.png"
+            />
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <div class="hamburger-icon" onclick="toggleSidebar()">&#9776;</div>
+
+    <div id="sideBarContainer" class="popup-overlay" onclick="toggleSidebar()">
+        <div class="side-bar">
+            <button class="mdiabout-parent" id="popupframeButton">
+                <img class="mdiabout-icon" alt="" src="./public/mdiabout@2x.png" />
+                <div class="about1">About</div>
+            </button>
+            <button class="mdiabout-group" id="popupframeButton1">
+                <img class="mdiabout-icon" alt="" src="./public/mdiabout@2x.png" />
+                <div class="about1">Report</div>
+            </button>
+            <button class="rectangle-parent" id="popupframeButton2">
+                <div class="frame-child"></div>
+                <div class="log-out-parent">
+                    <b class="log-out">Log out</b>
+                    <img class="mdiabout-icon" alt="" src="./public/linemdlogout@2x.png" />
+                </div>
+            </button>
+            <button class="mdipassword-parent" id="popupgroupButton">
+                <img class="mdiabout-icon" alt="" src="./public/mdipassword@2x.png" />
+                <div class="change-password2">Change Password</div>
+            </button>
+            <img class="carbonclose-filled-icon" alt="" src="./public/carbonclosefilled@2x.png" />
+        </div>
+    </div>
+
+
+    <script>
+      
+        function toggleSidebar() {
+            var sideBar = document.getElementById('sideBarContainer');
+            sideBar.style.display = (sideBar.style.display === 'block') ? 'none' : 'block';
+        }
+   
+      var popupframeButton = document.getElementById("popupframeButton");
+      if (popupframeButton) {
+        popupframeButton.addEventListener("click", function (e) {
+          window.location.href = "./about.html";
+        });
+      }
+      
+      var popupframeButton1 = document.getElementById("popupframeButton1");
+      if (popupframeButton1) {
+        popupframeButton1.addEventListener("click", function (e) {
+          window.location.href = "./report.html";
+        });
+      }
+      
+      var popupframeButton2 = document.getElementById("popupframeButton2");
+      if (popupframeButton2) {
+        popupframeButton2.addEventListener("click", function (e) {
+          window.location.href = "./index.html";
+        });
+      }
+      
+      var popupgroupButton = document.getElementById("popupgroupButton");
+      if (popupgroupButton) {
+        popupgroupButton.addEventListener("click", function (e) {
+          window.location.href = "./change-password.html";
+        });
+      }
+      
+      var frameButton = document.getElementById("frameButton");
+      if (frameButton) {
+        frameButton.addEventListener("click", function (e) {
+          window.location.href = "./profile.html";
+        });
+      }
+      
+      var frameButton2 = document.getElementById("frameButton2");
+      if (frameButton2) {
+        frameButton2.addEventListener("click", function (e) {
+          window.location.href = "./updates.html";
+        });
+      }
+      
+      var mingcutesettings1Fill = document.getElementById("mingcutesettings1Fill");
+      if (mingcutesettings1Fill) {
+        mingcutesettings1Fill.addEventListener("click", function () {
+          var popup = document.getElementById("sideBarContainer");
+          if (!popup) return;
+          var popupStyle = popup.style;
+          if (popupStyle) {
+            popupStyle.display = "flex";
+            popupStyle.zIndex = 100;
+            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
+            popupStyle.alignItems = "center";
+            popupStyle.justifyContent = "center";
+          }
+          popup.setAttribute("closable", "");
+      
+          var onClick =
+            popup.onClick ||
+            function (e) {
+              if (e.target === popup && popup.hasAttribute("closable")) {
+                popupStyle.display = "none";
+              }
+            };
+          popup.addEventListener("click", onClick);
+        });
+      }
+      
+      var frameButton3 = document.getElementById("frameButton3");
+      if (frameButton3) {
+        frameButton3.addEventListener("click", function (e) {
+          window.location.href = "./check-in.html";
+        });
+      }
+      
+      var frameButton4 = document.getElementById("frameButton4");
+      if (frameButton4) {
+        frameButton4.addEventListener("click", function (e) {
+          window.location.href = "./leave.html";
+        });
+      }
+      
+      var frameButton5 = document.getElementById("frameButton5");
+      if (frameButton5) {
+        frameButton5.addEventListener("click", function (e) {
+          window.location.href = "./salary.html";
+        });
+      }
+      
+      var frameButton6 = document.getElementById("frameButton6");
+      if (frameButton6) {
+        frameButton6.addEventListener("click", function (e) {
+          window.location.href = "./tasks.html";
+        });
+      }
+      </script>
+  </body>
+</html>

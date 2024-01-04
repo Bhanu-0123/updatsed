@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roles</title>
+    <style>
+        :root {
+            --color-white: #ffffff;
+            --color-darkorange: #ff7300;
+            --color-lightgray: #dbdbdb;
+            --color-black: #000000;
+            --br-6xl: 10px;
+            --font-family: 'Arial', sans-serif; /* Replace with the actual "janu" font if available */
+            --font-size-mid: 16px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            background-color: var(--color-white);
+            font-family: var(--font-family);
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+
+        .admin-panel {
+            text-align: center;
+            border: 1px solid var(--color-darkorange);
+            padding: 20px;
+            border-radius: var(--br-6xl);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            background-color: var(--color-lightgray);
+            color: var(--color-black);
+        }
+
+        .h2 {
+            text-decoration-color: var(--color-white);
+            color: var(--color-white);
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: var(--font-size-mid);
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: var(--color-darkorange);
+            color: var(--color-black);
+            border-radius: 25px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: var(--color-white);
+            color: var(--color-darkorange);
+        }
+
+        .login-button {
+            background-color: var(--color-darkorange);
+            color: var(--color-black);
+        }
+
+        .signup-button {
+            background-color: var(--color-darkorange);
+            color: var(--color-black);
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="public/m.jpg" alt="Logo">
+    <div class="admin-panel">
+        <h2>Welcome! Choose Your Role</h2>
+        <div class="button-container">
+            <button class="button login-button" onclick="redirectTo('main.html')">User</button>
+            <button class="button signup-button" onclick="redirectTo('adam.html')">Admin</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
